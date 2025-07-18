@@ -1,0 +1,60 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: black;
+    color: white;
+}
+
+header {
+    padding: 2rem;
+    text-align: center;
+}
+
+.scores__section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.choose__section {
+    padding: 2rem;
+}
+
+img {
+    height: 95%;
+    width: 95%;
+}
+
+.rock__button {
+    padding: 2rem;
+    border-radius: 15px;
+    height: 25rem;
+    width: 25rem;
+    background-color: rgb(169, 3, 3);
+}
+
+.paper__button {
+    padding: 2rem;
+    border-radius: 15px;
+    height: 25rem;
+    width: 25rem;
+    background-color: rgb(2, 182, 182);
+}
+
+.scissors__button {
+    padding: 2rem;
+    border-radius: 15px;
+    height: 25rem;
+    width: 25rem;
+    background-color: goldenrod;
+}
+
+.moves__section {
+    text-align: center;
+}
+
+.finalMessage__section {
+    text-align: center;
+}
