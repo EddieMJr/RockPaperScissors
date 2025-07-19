@@ -13,6 +13,18 @@
         <h2>Best of 7 Series!</h2>
     </header>
     <main>
+        <section class="message__section">
+            <h3 class="userPick__h3">You Picked: </h3>
+            <h3 class="compPick__h3">Your Opponent Picked: </h3>
+            <h2 class="winLossMess__h3">You Won!</h2>
+        </section>
+        
+        <section class="choose__section"><center>
+            <button class="rock__button" onclick="playRPS('rock')"><img src="images/theRock.png"></button>
+            <button class="paper__button" onclick="playRPS('paper')"><img src="images/DoodleBob.webp"></button>
+            <button class="scissors__button" onclick="playRPS('scissors')"><img src="images/edScissorhands.png"></button></center>
+        </section>
+
         <section class="scores__section"> 
             <div class="userScore__div">
                 <h3>Your score:</h3>
@@ -25,20 +37,6 @@
             </div>
         </section>
 
-        <section class="choose__section"><center>
-            <button class="rock__button" onclick="playRPS('rock')"><img src="images/theRock.png"></button>
-            <button class="paper__button" onclick="playRPS('paper')"><img src="images/DoodleBob.webp"></button>
-            <button class="scissors__button" onclick="playRPS('scissors')"><img src="images/edScissorhands.png"></button></center>
-        </section>
-
-        <section class="moves__section">
-            <h3>Moves Left:</h3>
-            <p class="movesLeft__p">7</p>
-        </section>
-
-        <section class="finalMessage__section">
-            <h3 class="winLossMess__h3"></h3>
-        </section>
     </main>
 </body>
 </html>
