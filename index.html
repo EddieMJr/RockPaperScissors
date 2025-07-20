@@ -5,38 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let's Play Rock Paper Scissors!</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
 </head>
 <body>
     <header>
         <h1>Let's Play Rock Paper Scissors!</h1>
-        <h2>Best of 7 Series!</h2>
     </header>
     <main>
         <section class="message__section">
-            <h3 class="userPick__h3">You Picked: </h3>
-            <h3 class="compPick__h3">Your Opponent Picked: </h3>
-            <h2 class="winLossMess__h3">You Won!</h2>
+            <h3 id="userPick__h3">You Picked: </h3>
+            <h3 id="compPick__h3">Your Opponent Picked: </h3>
+            <h2 id="winLossMess__h2"></h2>
         </section>
         
         <section class="choose__section"><center>
-            <button class="rock__button" onclick="playRPS('rock')"><img src="images/theRock.png"></button>
-            <button class="paper__button" onclick="playRPS('paper')"><img src="images/DoodleBob.webp"></button>
-            <button class="scissors__button" onclick="playRPS('scissors')"><img src="images/edScissorhands.png"></button></center>
+            <button id="rock__button" onclick="playRPS('rock')"><img src="images/theRock.png"></button>
+            <button id="paper__button" onclick="playRPS('paper')"><img src="images/DoodleBob.webp"></button>
+            <button id="scissors__button" onclick="playRPS('scissors')"><img src="images/edScissorhands.png"></button></center>
         </section>
 
-        <section class="scores__section"> 
+        <section class="record__section">
+            <h3 id="winCount__h3">Wins: </h3>
+            <h3 id="lossCount__h3">Losses: </h3> 
+            <h3 id="tieCount__h3">Ties: </h3>
+
+        </section>
+
+       <!--  <section class="scores__section"> 
             <div class="userScore__div">
-                <h3>Your score:</h3>
-                <p class="userScoreCount__div">0</p>
+                <h3 id="userScoreCount__p">Your score: </h3>
+                <p>0</p>
             </div>
 
             <div class="compScore__div">
-                <h3>Computer Score:</h3>
-                <p class="compScoreCount__div">0</p>
-            </div>
-        </section>
+                <h3 id="compScoreCount__h3">Computer Score: </h3>
+                <p>0</p>
+            </div> 
+        </section> -->
 
     </main>
+    <script src="index.js"></script>
 </body>
 </html>

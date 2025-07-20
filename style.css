@@ -14,6 +14,11 @@ header {
     text-align: center;
 }
 
+.message__section {
+    padding: 2rem;
+
+}
+
 .scores__section {
     padding: 2rem;
     text-align: center;
@@ -28,7 +33,7 @@ img {
     width: 95%;
 }
 
-.rock__button {
+#rock__button {
     padding: 2rem;
     border-radius: 15px;
     height: 25rem;
@@ -36,7 +41,7 @@ img {
     background-color: rgb(169, 3, 3);
 }
 
-.paper__button {
+#paper__button {
     padding: 2rem;
     border-radius: 15px;
     height: 25rem;
@@ -44,18 +49,10 @@ img {
     background-color: rgb(2, 182, 182);
 }
 
-.scissors__button {
+#scissors__button {
     padding: 2rem;
     border-radius: 15px;
     height: 25rem;
     width: 25rem;
     background-color: goldenrod;
-}
-
-.moves__section {
-    text-align: center;
-}
-
-.finalMessage__section {
-    text-align: center;
 }

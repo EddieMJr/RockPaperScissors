@@ -1,49 +1,60 @@
 //constants
 const picks = ["rock", "paper", "scissors"];
-const rockPick = document.getElementsByClassName("rock__button");
-const paperPick = document.getElementsByClassName("paper__button");
-const scissorsPick = document.getElementsByClassName("scissors__button");
-const userScoreCount = document.getElementsByClassName("userScoreCount__div");
-const compScoreCount = document.getElementsByClassName("compScoreCount__div");
-const result = document.getElementsByClassName("winLossMess__h3");
+const userPick = document.getElementById("userPick__h3");
+const compPick = document.getElementById("compPick__h3");
+const result = document.getElementById("winLossMess__h2");
+const userScoreTotal = document.getElementById("userScoreCount__h3");
+const compScoreTotal = document.getElementById("compScoreCount__h3");
+const wins = document.getElementById("winCount__h3");
+const losses = document.getElementById("lossCount__h3");
+const ties = document.getElementById("tieCount__h3");
+let winCount = 0;
+let lossCount = 0;
+let tieCount = 0;
 
-let userScore = 0;
-let compScore = 0;
-
-
-function playRPS(playerChoice){
+function playRPS(userChoice){
+    // shuffles the picks for the computer
     const computerChoice = picks[Math.floor(Math.random() * 3)];
-    let rockPick = picks ['rock'];
-    let paperPick = picks ['paper'];
-    let scissorsPick = picks ['scissors'];
-    let result = ""
-    console.log(computerChoice); //tests if computer works
-}
+    let message = "";
+    
+    // determines if the round is a tie, win or loss
+    if (userChoice == computerChoice){
+        message = "TIE!"
+    }
+    else {
+        switch(userChoice){
+            case "rock":
+                message = (computerChoice == "scissors") ? "You WON!" : "You lost :(";
+                break;
+            case "paper":
+                message = (computerChoice == "rock") ? "You WON!" : "You lost :(";
+                break;
+            case "scissors":
+                message = (computerChoice == "paper") ? "You WON!" : "You lost :(";
+                break;
+        }
+    }
 
-if (picks == "rock" && computerChoice == "scissors") {
-    alert("Good Pick!");
-    userScore +=1;
+    // adds win/loss/tie message to screen and shows what the user & computer message chose
+    userPick.textContent = `You Picked: ${userChoice}`;
+    compPick.textContent = `You Picked: ${computerChoice}`;
+    result.textContent = message;
 
-} else if (picks == "paper" && computerChoice == "rock"){
-    alert("Good Pick!");
-    userScore +=1;
+    // count all the user's wins, losses, & ties
+    switch (message) {
+        case "You WON!":
+            winCount++;
+            break;
+        case "You lost :(":
+            lossCount++;
+            break;
+        case "TIE!":
+            tieCount++;
+            break;
+    }
 
-} else if (picks == "scissors" && computerChoice == "paper"){
-    alert("Good Pick!");    
-    userScore +=1;
+    wins.textContent = `Wins: ${winCount}`;
+    losses.textContent = `Losses: ${lossCount}`;
+    ties.textContent = `Ties: ${tieCount}`;
 
-} else if (picks == "rock" && computerChoice == "paper") {
-    alert("Good Pick!");
-    compScore +=1;
-
-} else if (picks == "paper" && computerChoice == "scissors"){
-    alert("Good Pick!");
-    compScore +=1;
-
-} else if (picks == "scissors" && computerChoice == "rock"){
-    alert("Good Pick!");    
-    compScore +=1;
-
-} else {
-    alert("Thats a Tie!");
 }
